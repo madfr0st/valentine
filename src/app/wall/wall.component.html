@@ -14,49 +14,55 @@
 >
 
   <!-- Countdown Timer -->
-  <div *ngIf="its_Valentine_day" class="countdown-container">
-    <h2>Countdown to Valentine's Day</h2>
+  <div *ngIf="!its_Valentine_day" class="countdown-container">
+    <h2 style=" box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); border-radius: 2%; color: black; margin-bottom: 40px; padding: 10px;">🎉💕 A Sweet Surprise for Valentine’s Day! 💘✨</h2>
     <div class="countdown">
       <div
         class="time-box"
         [class.flip]="flipState.days"
         [attr.data-value]="countdownTime.days"
       >
-        {{ countdownTime.days }}<small>Days</small>
+        {{ countdownTime.days }}
       </div>
       <div
         class="time-box"
         [class.flip]="flipState.hours"
         [attr.data-value]="countdownTime.hours"
       >
-        {{ countdownTime.hours }}<small>Hours</small>
+        {{ countdownTime.hours }}
       </div>
       <div
         class="time-box"
         [class.flip]="flipState.minutes"
         [attr.data-value]="countdownTime.minutes"
       >
-        {{ countdownTime.minutes }}<small>Minutes</small>
+        {{ countdownTime.minutes }}
       </div>
       <div
         class="time-box"
         [class.flip]="flipState.seconds"
         [attr.data-value]="countdownTime.seconds"
       >
-        {{ countdownTime.seconds }}<small>Seconds</small>
+        {{ countdownTime.seconds }}
       </div>
+    </div>
+    <div style="margin-top: 40px;width: auto; height: 50px; display: flex;justify-content: center; gap: 10px;  background: rgba(236, 198, 198, 0.516); border-radius: 2%;  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);">
+      <h4 class="text-box">Days</h4>
+      <h4 class="text-box">Hours</h4>
+      <h4 class="text-box">Minutes</h4>
+      <h4 class="text-box">Seconds</h4>
     </div>
   </div>
 
   <!-- Buttons -->
  <div style="width: auto; display: flex; flex-direction: column; align-items: center;">
-  <div  *ngIf="!showHappyMessage" >
-    <h3 style="color: rgb(0, 0, 0);">Be my sunshine and sprinkles? 💕 Be my Valentine? 😊✨ 😊✨</h3>
+  <div  *ngIf="its_Valentine_day && !showHappyMessage" >
+    <h3 style="color: rgb(0, 0, 0);  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); height: auto; padding: 10px; border-radius: 1%;margin-left: 10px;margin-right: 10px; margin-bottom: 60px;background: rgba(236, 198, 198, 0.516);">Be my sunshine and sprinkles? 💕 Be my Valentine? 😊✨ 😊✨</h3>
   </div>
 
   <div
   class="button-container"
-  *ngIf="!its_Valentine_day && !showHappyMessage"
+  *ngIf="its_Valentine_day && !showHappyMessage"
   [style.height.vw]="yesButtonHeight"
   [style.width.vw]="yesButtonWidth" 
   [style.min-width.px]="100"
@@ -76,6 +82,7 @@
       justify-content: center;
       align-items: center;
       display: flex;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     "
   >
     <div class="yes-button" [class.heartbeat]="isHeartBeating" 
@@ -92,14 +99,14 @@
 
   </div>
 
-  <button class="no-button" style=" background-color: rgba(242, 242, 242, 0.832);width: auto;height:100px;min-width: 100px;" (click)="onNoClick()">{{ valentine_no_message[noMessageIndex] }}</button>
+  <button class="no-button" style=" box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); background-color: rgba(242, 242, 242, 0.832);width: auto;height:100px;min-width: 100px;" (click)="onNoClick()">{{ valentine_no_message[noMessageIndex] }}</button>
 </div>
 
 
  </div>
 
   <div style="width: auto; display: flex; flex-direction: column; align-items: center; " *ngIf="showHappyMessage">
-    <div> <h3 style="color: rgb(0, 0, 0);">I knew it! Now my smile is stuck forever! 😍💕</h3></div>
-    <img style="width: 70vw; max-width: 500px;" src="/assets/gifs/Cat Love Sticker by Capoo.gif" alt="" />
+    <div> <h3  style=" box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);margin-bottom:60px;color: rgb(0, 0, 0); padding: 10px; margin-left: 10px; margin-right: 10px; background: rgba(236, 198, 198, 0.516);">I knew it! Now my smile is stuck forever! 😍💕</h3></div>
+    <img style=" box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);padding: 40px ;width: 70vw; max-width: 500px;" src="/assets/gifs/Cat Love Sticker by Capoo.gif" alt="" />
   </div>
 

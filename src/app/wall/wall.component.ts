@@ -130,8 +130,8 @@ export class WallComponent implements OnInit, AfterViewInit {
   onNoClick() {
     if (this.noMessageIndex < this.valentine_no_message.length - 1) {
       this.noMessageIndex++;
-      this.yesButtonHeight +=10;
-      this.yesButtonWidth +=10;
+      this.yesButtonHeight +=3;
+      this.yesButtonWidth +=3;
     }
     
   }
