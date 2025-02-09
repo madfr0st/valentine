@@ -1,0 +1,26 @@
+.bg {
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 0;
+    background-image: url("/assets/IMG_0133.JPG");
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .glass{
+    position: relative;
+    overflow: scroll;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    z-index: 0;
+    backdrop-filter: blur(0px);
+    box-shadow: 0px 0px 20px rgba(227, 228, 237, 0.35);
+  }

@@ -1,0 +1,105 @@
+<audio #backgroundMusic autoplay loop>
+  <source src="/assets/love.mp3" type="audio/mp3" />
+  Your browser does not support the audio element.
+</audio>
+<div
+  style="
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  "
+>
+
+  <!-- Countdown Timer -->
+  <div *ngIf="its_Valentine_day" class="countdown-container">
+    <h2>Countdown to Valentine's Day</h2>
+    <div class="countdown">
+      <div
+        class="time-box"
+        [class.flip]="flipState.days"
+        [attr.data-value]="countdownTime.days"
+      >
+        {{ countdownTime.days }}<small>Days</small>
+      </div>
+      <div
+        class="time-box"
+        [class.flip]="flipState.hours"
+        [attr.data-value]="countdownTime.hours"
+      >
+        {{ countdownTime.hours }}<small>Hours</small>
+      </div>
+      <div
+        class="time-box"
+        [class.flip]="flipState.minutes"
+        [attr.data-value]="countdownTime.minutes"
+      >
+        {{ countdownTime.minutes }}<small>Minutes</small>
+      </div>
+      <div
+        class="time-box"
+        [class.flip]="flipState.seconds"
+        [attr.data-value]="countdownTime.seconds"
+      >
+        {{ countdownTime.seconds }}<small>Seconds</small>
+      </div>
+    </div>
+  </div>
+
+  <!-- Buttons -->
+ <div style="width: auto; display: flex; flex-direction: column; align-items: center;">
+  <div  *ngIf="!showHappyMessage" >
+    <h3 style="color: rgb(0, 0, 0);">Be my sunshine and sprinkles? 💕 Be my Valentine? 😊✨ 😊✨</h3>
+  </div>
+
+  <div
+  class="button-container"
+  *ngIf="!its_Valentine_day && !showHappyMessage"
+  [style.height.vw]="yesButtonHeight"
+  [style.width.vw]="yesButtonWidth" 
+  [style.min-width.px]="100"
+  [style.min-height.px]="100"
+
+>
+
+  <div
+  [style.height.vw]="yesButtonHeight"
+  [style.width.vw]="yesButtonWidth" 
+  [style.min-width.px]="100"
+  [style.min-height.px]="100"
+    style="
+      background-color: rgba(238, 253, 255, 0.3);
+      padding: 1%;
+      border-radius: 4%;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+    "
+  >
+    <div class="yes-button" [class.heartbeat]="isHeartBeating" 
+    [style.height.vw]="yesButtonHeight"
+    [style.width.vw]="yesButtonWidth" 
+    [style.min-width.px]="100"
+  [style.min-height.px]="100"
+  (click)="onYesClick()">
+      <img  [style.height.vw]="yesButtonHeight"
+        [style.width.vw]="yesButtonWidth" 
+        [style.min-width.px]="100"
+        [style.min-height.px]="100"
+         src="assets/gifs/cute-yes.gif" alt=""></div>
+
+  </div>
+
+  <button class="no-button" style=" background-color: rgba(242, 242, 242, 0.832);width: auto;height:100px;min-width: 100px;" (click)="onNoClick()">{{ valentine_no_message[noMessageIndex] }}</button>
+</div>
+
+
+ </div>
+
+  <div style="width: auto; display: flex; flex-direction: column; align-items: center; " *ngIf="showHappyMessage">
+    <div> <h3 style="color: rgb(0, 0, 0);">I knew it! Now my smile is stuck forever! 😍💕</h3></div>
+    <img style="width: 70vw; max-width: 500px;" src="/assets/gifs/Cat Love Sticker by Capoo.gif" alt="" />
+  </div>
+

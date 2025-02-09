@@ -1,0 +1,84 @@
+<div style="height: 100px; width: 100%; display: flex; justify-content: start;  position: fixed;
+top: 0;
+left: 0;">
+  <div
+    style="
+      height: 100px;
+      width: 100px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding-top: 40px;
+      padding-left: 40px;
+    "
+  >
+    <div
+      class="menu_button"
+      [ngClass]="{
+        menu_button_opened: isMenuOpen,
+        menu_button_closed: !isMenuOpen
+      }"
+      (click)="toggleMenu()"
+    ></div>
+  </div>
+</div>
+
+<div
+  [ngClass]="{ 'menu-open': isMenuOpen, 'menu-closed': !isMenuOpen }"
+  class="menu-panel"
+>
+  <div
+    style="
+      height: 80%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    
+    "
+  >
+  <img src="/assets/gifs/happy dance Sticker by Capoo.gif" style="width: 80%;" />
+  <H1>The Hue of My Soul</H1>
+
+  <p>I admire the light that will never be mine,</p>  
+  <p>A glow meant for you, so radiant, divine.</p>  
+  <p>Yet in your eyes, I see my soul’s true hue,</p>  
+  <p>A love unspoken, but endlessly true.</p>
+  
+
+</div>
+
+  
+
+  <div
+    style="
+      display: flex;
+      justify-content: space-around;
+      position: inherit;
+      bottom: 32px;
+      width: 100%;
+    "
+  >
+  
+    <a href="https://www.instagram.com/sumansaurav117/" target="_blank">
+      <img src="/assets/icon/social_12234080.png" class="logo" />
+    </a>
+    <a href="https://www.linkedin.com/in/suman005/" target="_blank">
+      <img src="assets/icon/linkedin_408703.png" class="logo" />
+    </a>
+    <a
+      href="https://mail.google.com/mail/?view=cm&fs=1&to=suman.saurav117@gmail.com"
+      target="_blank"
+    >
+      <img src="assets/icon/email_3624728.png" class="logo" />
+    </a>
+    <a href="https://github.com/madfr0st" target="_blank">
+      <img src="assets/icon/github_3488408.png" class="logo" />
+    </a>
+
+    <a href="https://suman-saurav.web.app/" target="_blank">
+      <img src="assets/icon/portfolio_281089.png" class="logo" />
+    </a>
+  </div>
+ 
+</div>

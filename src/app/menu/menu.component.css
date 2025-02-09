@@ -1,0 +1,89 @@
+.menu_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: all 0.5s ease-in-out; /* Smooth transition for size and scaling */
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%; /* Optional: for a circular effect */
+  }
+
+  p {
+    padding: 12px 24px 0px;
+    margin: 0px;
+    font-size: 14px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: justify;
+  }
+  
+  
+  .menu_button_closed {
+    height: 80px;
+    width: 80px;
+    transform: scale(1); /* Start smaller */
+    background-image: url('/assets/gifs/Sad Mood Sticker.gif');
+  }
+  
+  .menu_button_opened {
+    height: 100px;
+    width: 100px;
+    transform: scale(1.5); /* Scale up smoothly */
+    background-image: url('/assets/gifs/Three Hearts Love Sticker.gif');
+  }
+
+  .menu-panel {
+    height: 0;
+    width: 320px;
+    background-color: rgba(196, 224, 237, 0.614);
+    backdrop-filter: blur(30px);
+    box-shadow: 0px 0px 20px rgba(222, 225, 255, 0.35);
+    border: 1px solid rgba(246, 246, 246, 0.923);
+    border-radius: 1%;
+    position: absolute;
+    top: 175px;
+    left: 60px;
+    z-index: 99;
+    overflow: hidden; /* Prevent content from spilling out during the transition */
+    transition: height 0.5s ease-in-out, opacity .5s ease-in-out;
+    opacity: 0;
+  }
+  
+  .menu-open {
+    height: 450px;
+    opacity: 1;
+  }
+  
+  .menu-closed {
+    height: 0;
+    opacity: 0;
+  }
+
+  .glass{
+    position: relative;
+    overflow: scroll;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    z-index: 0;
+    backdrop-filter: blur(30px);
+    box-shadow: 0px 0px 20px rgba(227, 228, 237, 0.35);
+  }
+
+  .logo{
+    height: 35px;
+    width: 35px;
+    box-shadow: 0px 0px 20px rgba(168, 168, 168, 0.683);
+    background-color: transparent;
+  }
+
+  H1 {
+    padding: 12px 12px 12px;
+    margin: 0px;
+    font-size: 16px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: justify;
+  }
