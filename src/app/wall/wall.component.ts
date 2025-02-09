@@ -91,7 +91,7 @@ export class WallComponent implements OnInit, AfterViewInit {
     const chicagoTime = new Intl.DateTimeFormat('en-US', options).format(now);
 
     this.currentTime = new Date(chicagoTime);
-
+    console.log(this.currentTime)
     // Check if today is Valentine's Day
     this.its_Valentine_day = this.currentTime.getFullYear() === 2025 &&
       this.currentTime.getMonth() === 1 && // February (Month index is 0-based)

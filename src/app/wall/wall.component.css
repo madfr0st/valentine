@@ -93,8 +93,9 @@ h4 {
 /* Flip Clock Style */
 .time-box {
   position: relative;
+  padding-top: 10px;
   width: 80px;
-  height: 100px;
+  height: 80px;
   background: rgba(236, 198, 198, 0.516);
   color: rgb(0, 0, 0);
   font-size: 60px;
